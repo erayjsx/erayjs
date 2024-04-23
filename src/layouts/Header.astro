@@ -1,0 +1,49 @@
+---
+const data = await import("../api/config.json");
+---
+
+<header class="flex row text-lg justify-center items-center px-8 h-24">
+  <nav
+    class="container max-w-screen-lg flex flex-col gap-4 sm:!flex sm:flex-row"
+  >
+    <div class="flex items-center flex-1">
+      <a
+        href="/"
+        class="flex items-center space-x-2 text-xl font-bold rounded-full hover:bg-zinc-200 px-4 py-2"
+      >
+        <img src={data.default[0].logo} class="w-10 rounded-full" />
+        <p>{data.default[0].name}</p>
+      </a>
+    </div>
+    <div
+      class="flex flex-2 max-lg:hidden font-medium *:opacity-60 hover:*:opacity-100 row gap-12 justify-center items-center"
+    >
+      {
+        data.default[0].menu.map((item) => (
+          <>
+            <a href={item.href}>{item.title}</a>
+          </>
+        ))
+      }
+    </div>
+    <div
+      class="flex max-lg:hidden flex-1 items-center row gap-5 *:text-3xl justify-end *:*:fill-black *:*:opacity-40 hover:*:*:opacity-100"
+    >
+      {
+        data.default[0].social.slice(0, 3).map((item) => (
+          <a href="/" title={item.title}>
+            <i class={`${item.icon} text-2xl`} />
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+  <button class="hidden max-lg:block">menu</button>
+</header>
+
+<div
+  transition:animate="slide"
+  class="absolute hidden -mt-24 w-full z-10 overflow-hidden h-dvh bg-black"
+>
+  asd
+</div>

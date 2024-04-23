@@ -1,0 +1,38 @@
+[
+  {
+    "name": "erayjs",
+    "logo": "https://avatars.githubusercontent.com/u/59411096?v=4",
+    "menu": [
+      {
+        "title": "Hakkımda",
+        "href": "/"
+      },
+      {
+        "title": "Projects",
+        "href": "/projects"
+      },
+      {
+        "title": "Blogs",
+        "href": "/blogs"
+      },
+      {
+        "title": "Contact",
+        "href": "/equip"
+      }
+    ],
+    "social": [
+      {
+        "title": "instagram",
+        "icon": "ri-instagram-line"
+      },
+      {
+        "title": "twitter",
+        "icon": "ri-twitter-x-line"
+      },
+      {
+        "title": "github",
+        "icon": "ri-github-line"
+      }
+    ]
+  }
+]

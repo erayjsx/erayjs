@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Chip from "../components/Chip.astro";
+---
+
+<Layout title="erayjs.">
+  <main class="flex animate__animated animate__fadeIn">
+    <div class="max-w-screen-lg my-12 mx-auto px-6">
+      <div class="space-y-6">
+        <h1 class="grid font-display text-xl sm:text-2xl">
+          <b class="text-3xl">Eray Can Topcu</b>
+          <p class="opacity-60 font-bold">erayjs</p>
+          <p class="opacity-60 text-lg">Software Developer</p>
+        </h1>
+
+        <p class="text-base">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+        </p>
+
+        <div>
+          <h3 class="font-semibold">Education</h3>
+          <ul class="text-base">
+            <li class="flex row">
+              <p>- Çankırı Karatekin University, Computer Prog.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h3 class="font-semibold">Teknologies</h3>
+          <div class="flex row gap-3 flex-wrap">
+            <Chip title="C#" />
+            <Chip title="PHP" />
+            <Chip title="React.js" />
+            <Chip title="React Native" />
+            <Chip title="HTML" />
+            <Chip title="CSS" />
+          </div>
+
+          <h3 class="font-semibold">Programs</h3>
+          <div class="flex row gap-3 flex-wrap">
+            <Chip title="Figma" />
+            <Chip title="3Ds Max" />
+            <Chip title="Photoshop" />
+            <Chip title="Office 365" />
+          </div>
+
+          <h3 class="font-semibold">Social Media</h3>
+          <div class="flex row gap-3 flex-wrap">
+            <Chip title="Github" />
+            <Chip title="Linkedin" />
+            <Chip title="Instagram" />
+            <Chip title="Twitter" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 1300px;
+    max-width: calc(100% - 1rem);
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+</style>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div
+  class="px-5 cursor-pointer text-white hover:bg-zinc-800 text-base bg-black py-2 rounded-full"
+>
+  {title}
+</div>
