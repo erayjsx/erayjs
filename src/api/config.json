@@ -22,16 +22,24 @@
     ],
     "social": [
       {
-        "title": "instagram",
-        "icon": "ri-instagram-line"
+        "title": "Linkedin",
+        "icon": "ri-linkedin-box-line",
+        "href": "https://www.linkedin.com/in/erayjs/"
       },
       {
-        "title": "twitter",
-        "icon": "ri-twitter-x-line"
+        "title": "Instagram",
+        "icon": "ri-instagram-line",
+        "href": "https://www.instagram.com/erayjsx/"
       },
       {
-        "title": "github",
-        "icon": "ri-github-line"
+        "title": "Twitter",
+        "icon": "ri-twitter-x-line",
+        "href": "https://twitter.com/erayjs"
+      },
+      {
+        "title": "Github",
+        "icon": "ri-github-line",
+        "href": "https://github.com/erayjsx"
       }
     ]
   }

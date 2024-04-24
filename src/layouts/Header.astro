@@ -18,7 +18,7 @@ const data = await import("../api/config.json");
   });
 </script>
 
-<header class="flex row text-lg justify-center items-center px-8 h-24">
+<header class="flex row text-lg justify-center items-center px-6 h-24">
   <nav
     class="container max-w-screen-lg flex flex-col gap-4 sm:!flex sm:flex-row"
   >
@@ -49,8 +49,8 @@ const data = await import("../api/config.json");
       class="flex max-lg:hidden flex-1 items-center row gap-5 *:text-3xl justify-end *:*:fill-black *:*:opacity-40 hover:*:*:opacity-100"
     >
       {
-        data.default[0].social.slice(0, 3).map((item) => (
-          <a href="/" title={item.title}>
+        data.default[0].social.slice(0, 4).map((item) => (
+          <a href="/" target="_blank" title={item.title}>
             <i class={`${item.icon} text-2xl`} />
           </a>
         ))
@@ -89,11 +89,12 @@ const data = await import("../api/config.json");
     class="bg-zinc-100 animate__animated animate__fadeInUp flex flex-1 flex-col m-8 overflow-hidden items-center rounded-2xl"
   >
     {
-      data.default[0].social.slice(0, 3).map((item) => (
+      data.default[0].social.map((item) => (
         <a
           href="/"
+          target="_blank"
           title={item.title}
-          class="flex h-16 px-6 transition hover:bg-zinc-200 w-full items-center gap-4"
+          class="flex h-16 px-6 transition hover:bg-zinc-200 w-full items-center gap-6"
         >
           <i class={`${item.icon} text-2xl`} />
           <p class="font-semibold">{item.title}</p>

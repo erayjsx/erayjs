@@ -1,16 +1,30 @@
 ---
-const menu = [
-  {
-    title: "Hakkımda",
-    href: "/",
-  },
-];
+const data = await import("../api/config.json");
 ---
 
 <footer
-  class="flex gap-2 justify-center w-full max-lg:flex-col items-center py-10 text-center text-black *:opacity-55"
+  class="flex gap-2 justify-center w-full max-lg:flex-col items-center py-10 text-center text-black"
 >
-  <p>Bu web sitesinin kaynak kodlarına</p>
-  <a href="/" class="underline hover:opacity-100">Github üzerinden</a>
-  <p>ulaşabilirsiniz.</p>
+  <div class="justify-between w-full max-w-screen-lg flex items-center">
+    <div
+      class="bg-zinc-200 rounded-full items-center *:opacity-55 *:transition hover:*:opacity-100 flex px-2"
+    >
+      {
+        data.default[0].social.map((item) => (
+          <a
+            href="/"
+            target="_blank"
+            title={item.title}
+            class="flex h-14 w-14 items-center justify-center"
+          >
+            <i class={`${item.icon} text-2xl`} />
+          </a>
+        ))
+      }
+    </div>
+    <div class="justify-end flex gap-2 *:opacity-55 text-right">
+      <p>Tüm hakları saklıdır.</p>
+      <a href="/" class="underline hover:opacity-100">@eray</a>
+    </div>
+  </div>
 </footer>
