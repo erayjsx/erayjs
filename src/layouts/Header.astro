@@ -29,6 +29,7 @@ const data = await import("../api/config.json");
       >
         <img
           src={data.default[0].logo}
+          alt={data.default[0].name}
           class="w-10 h-10 bg-zinc-100 rounded-full"
         />
         <p>{data.default[0].name}</p>
@@ -40,7 +41,9 @@ const data = await import("../api/config.json");
       {
         data.default[0].menu.map((item) => (
           <>
-            <a href={item.href}>{item.title}</a>
+            <a href={item.href} title={item.title}>
+              {item.title}
+            </a>
           </>
         ))
       }
@@ -50,7 +53,7 @@ const data = await import("../api/config.json");
     >
       {
         data.default[0].social.slice(0, 4).map((item) => (
-          <a href="/" target="_blank" title={item.title}>
+          <a href={item.href} target="_blank" title={item.title}>
             <i class={`${item.icon} text-2xl`} />
           </a>
         ))
@@ -77,7 +80,11 @@ const data = await import("../api/config.json");
     {
       data.default[0].menu.map((item) => (
         <>
-          <a href={item.href} class="animate__animated animate__fadeInLeft">
+          <a
+            href={item.href}
+            title={item.title}
+            class="animate__animated animate__fadeInLeft"
+          >
             {item.title}
           </a>
         </>
@@ -91,7 +98,7 @@ const data = await import("../api/config.json");
     {
       data.default[0].social.map((item) => (
         <a
-          href="/"
+          href={item.href}
           target="_blank"
           title={item.title}
           class="flex h-16 px-6 transition hover:bg-zinc-200 w-full items-center gap-6"

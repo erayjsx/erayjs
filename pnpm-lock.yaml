@@ -35,6 +35,9 @@ dependencies:
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
+  erayjs:
+    specifier: 'link:'
+    version: 'link:'
   lucide-react:
     specifier: ^0.372.0
     version: 0.372.0(react@18.2.0)

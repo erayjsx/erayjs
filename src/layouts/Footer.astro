@@ -14,7 +14,7 @@ const data = await import("../api/config.json");
       {
         data.default[0].social.map((item) => (
           <a
-            href="/"
+            href={item.href}
             target="_blank"
             title={item.title}
             class="flex h-14 w-14 items-center justify-center"
@@ -25,8 +25,10 @@ const data = await import("../api/config.json");
       }
     </div>
     <div class="justify-end flex gap-2 *:opacity-55 text-right">
-      <p>Tüm hakları saklıdır.</p>
-      <a href="/" class="underline hover:opacity-100">@eray</a>
+      <p>Developed by.</p>
+      <a href="/" class="underline hover:opacity-100" title="Eray Can Topcu"
+        >@erayjs</a
+      >
     </div>
   </div>
 </footer>
