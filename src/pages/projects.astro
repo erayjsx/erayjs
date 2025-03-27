@@ -7,24 +7,5 @@ import Layout from "../layouts/Layout.astro";
   <main
     class="flex flex-col animate__animated animate__fadeIn h-full px-4 items-center justify-center"
   >
-    <div class="max-w-screen-lg w-full mb-12 mx-auto px-6 space-y-6">
-      <h2 class="font-bold text-3xl">projeler.</h2>
-
-      <div
-        class="flex flex-wrap gap-3 *:transition *:px-3 *:py-2 *:rounded-full"
-      >
-        <button class="bg-black text-white">Tümü</button>
-        <button class="bg-zinc-200 hover:bg-zinc-300">HTML-CSS</button>
-        <button class="bg-zinc-200 hover:bg-zinc-300">React</button>
-        <button class="bg-zinc-200 hover:bg-zinc-300">React Native</button>
-      </div>
-    </div>
-    <div
-      class="grid grid-cols-2 max-lg:grid-cols-1 flex-col max-w-screen-lg w-full px-4 flex-wrap gap-6"
-    >
-      <Card title="test" body="deneme" href="/" cat="HTML-CSS" />
-      <Card title="test" body="deneme" href="/" cat="React" />
-      <Card title="test" body="deneme" href="/" cat="React Native" />
-    </div>
   </main>
 </Layout>

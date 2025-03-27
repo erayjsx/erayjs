@@ -1,42 +1,38 @@
 ---
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
+import { Button } from "@/components/ui/button";
+
 const data = await import("../api/config.json");
+
+const pathname = Astro.url.pathname;
 ---
 
-<script>
-  document.getElementById("toggle").addEventListener("click", function () {
-    var menu = document.getElementById("menu");
-    menu.classList.replace("hidden", "visible");
-    menu.classList.replace("animate__fadeOut", "animate__fadeIn");
-    document.body.style.overflow = "hidden";
-  });
-
-  document.getElementById("toggleClose").addEventListener("click", function () {
-    var menu = document.getElementById("menu");
-    menu.classList.replace("visible", "hidden");
-    menu.classList.replace("animate__fadeIn", "animate__fadeOut");
-    document.body.style.overflow = "";
-  });
-</script>
-
-<header class="flex row text-lg justify-center items-center px-6 h-24">
+<header
+  class={`flex row text-lg justify-center items-center px-6 h-24 ${pathname === "/" ? "bg-[#64E19E] text-[#2F5A43]" : ""}`}
+>
   <nav
     class="container max-w-screen-lg flex flex-col gap-4 sm:!flex sm:flex-row"
   >
     <div class="flex items-center flex-1">
       <a
         href="/"
-        class="flex items-center space-x-2 text-xl font-bold transition rounded-full hover:bg-zinc-200 px-2 py-2"
+        class="flex items-center space-x-2 text-xl font-bold transition rounded-full px-2 py-2"
       >
-        <img
-          src={data.default[0].logo}
-          alt="Eray Can Topcu"
-          class="w-10 h-10 bg-zinc-100 rounded-full"
-        />
         <p>{data.default[0].name}</p>
       </a>
     </div>
     <div
-      class="flex flex-2 max-lg:hidden font-medium *:opacity-60 hover:*:opacity-100 row gap-12 justify-center items-center"
+      class="flex flex-2 max-lg:hidden text-base row gap-8 justify-center items-center"
     >
       {
         data.default[0].menu.map((item) => (
@@ -49,7 +45,7 @@ const data = await import("../api/config.json");
       }
     </div>
     <div
-      class="flex max-lg:hidden flex-1 items-center row gap-5 *:text-3xl justify-end *:*:fill-black *:*:opacity-40 hover:*:*:opacity-100"
+      class="flex max-lg:hidden flex-1 items-center row gap-5 *:text-3xl justify-end *:*:fill-black"
     >
       {
         data.default[0].social.slice(0, 4).map((item) => (
@@ -60,53 +56,6 @@ const data = await import("../api/config.json");
       }
     </div>
   </nav>
-  <button id="toggle" class="hidden max-lg:block">menu</button>
+
+  <Button>Open</Button>
 </header>
-
-<div
-  id="menu"
-  class="absolute animate__animated animate__fadeIn opacity-0 hidden transition -mt-24 w-full z-10 shadow-2xl overflow-hidden h-dvh bg-white"
->
-  <div class="flex justify-between px-8 h-24 items-center">
-    <p class="font-bold animate__animated animate__fadeInLeft text-xl">
-      @erayjs
-    </p>
-    <button id="toggleClose" class="animate__animated animate__fadeInRight"
-      >kapat</button
-    >
-  </div>
-
-  <div class="flex flex-col px-8 gap-4 *:text-3xl mt-2 *:font-bold">
-    {
-      data.default[0].menu.map((item) => (
-        <>
-          <a
-            href={item.href}
-            title={item.title}
-            class="animate__animated animate__fadeInLeft"
-          >
-            {item.title}
-          </a>
-        </>
-      ))
-    }
-  </div>
-
-  <div
-    class="bg-zinc-100 animate__animated animate__fadeInUp flex flex-1 flex-col m-8 overflow-hidden items-center rounded-2xl"
-  >
-    {
-      data.default[0].social.map((item) => (
-        <a
-          href={item.href}
-          target="_blank"
-          title={item.title}
-          class="flex h-16 px-6 transition hover:bg-zinc-200 w-full items-center gap-6"
-        >
-          <i class={`${item.icon} text-2xl`} />
-          <p class="font-semibold">{item.title}</p>
-        </a>
-      ))
-    }
-  </div>
-</div>

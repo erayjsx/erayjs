@@ -1,61 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Chip from "../components/Chip.astro";
+import { Button } from "../components/ui/button";
 ---
 
 <Layout title="erayjs.">
-  <main class="flex animate__animated animate__fadeIn">
-    <div class="max-w-screen-lg mb-12 mx-auto px-4">
-      <div class="space-y-6">
-        <h1 class="grid font-display text-xl sm:text-2xl">
-          <b class="text-3xl">Eray Can Topcu</b>
-          <p class="opacity-60 font-bold">erayjs</p>
-          <p class="opacity-60 text-lg">Software Developer</p>
-        </h1>
-
-        <p class="text-base">
+  <main class="flex">
+    <div
+      class="px-4 w-full h-[calc(80vh-14rem)] flex items-center flex-col gap-6 justify-center text-[#2F5A43] bg-[#64E19E] bg-[url('https://i.ibb.co/JWFDFyh6/image.png')] bg-cover bg-center bg-no-repeat"
+    >
+      <div
+        class="flex flex-col gap-6 w-full justify-center items-start max-w-screen-lg mx-auto"
+      >
+        <h1 class="text-5xl font-bold">Eray Can Topcu</h1>
+        <p>erayjs - developer</p>
+        <p class="text-sm max-w-2xl line-clamp-3">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the leap into electronic typesetting,
         </p>
-
-        <div>
-          <h3 class="font-semibold">Education</h3>
-          <ul class="text-base">
-            <li class="flex row">
-              <p>- Çankırı Karatekin University, Computer Prog.</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="space-y-4">
-          <h3 class="font-semibold">Technologies</h3>
-          <div class="flex row gap-3 flex-wrap">
-            <Chip title="C#" />
-            <Chip title="PHP" />
-            <Chip title="React.js" />
-            <Chip title="React Native" />
-            <Chip title="HTML" />
-            <Chip title="CSS" />
-          </div>
-
-          <h3 class="font-semibold">Programs</h3>
-          <div class="flex row gap-3 flex-wrap">
-            <Chip title="Figma" />
-            <Chip title="3Ds Max" />
-            <Chip title="Photoshop" />
-            <Chip title="Office 365" />
-          </div>
-
-          <h3 class="font-semibold">Social Media</h3>
-          <div class="flex row gap-3 flex-wrap">
-            <Chip title="Github" />
-            <Chip title="Linkedin" />
-            <Chip title="Instagram" />
-            <Chip title="Twitter" />
-          </div>
+        <div class="space-x-2">
+          <Button
+            variant="outline"
+            className="border-[#2F5A43] text-[#2F5A43] rounded-full"
+          >
+            <a href="/projects">my projects</a>
+          </Button>
+          <Button className="bg-[#2F5A43] text-white rounded-full">
+            <a href="/contact">contact</a>
+          </Button>
         </div>
       </div>
     </div>
@@ -63,14 +37,6 @@ import Chip from "../components/Chip.astro";
 </Layout>
 
 <style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 1300px;
-    max-width: calc(100% - 1rem);
-    font-size: 20px;
-    line-height: 1.6;
-  }
   .astro-a {
     position: absolute;
     top: -32px;
@@ -79,5 +45,8 @@ import Chip from "../components/Chip.astro";
     width: 220px;
     height: auto;
     z-index: -1;
+  }
+  h1 {
+    font-family: "Boldonse", system-ui, sans-serif;
   }
 </style>

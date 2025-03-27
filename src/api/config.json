@@ -4,19 +4,19 @@
     "logo": "https://avatars.githubusercontent.com/u/59411096?v=4",
     "menu": [
       {
-        "title": "Hakkımda",
+        "title": "me",
         "href": "/"
       },
       {
-        "title": "Projeler",
+        "title": "projects",
         "href": "/projects"
       },
       {
-        "title": "Bloglar",
+        "title": "blog",
         "href": "/blogs"
       },
       {
-        "title": "İletişim",
+        "title": "contact",
         "href": "/equip"
       }
     ],
